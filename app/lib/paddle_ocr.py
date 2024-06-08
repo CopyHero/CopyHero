@@ -1,5 +1,5 @@
 import base64
-from paddleocr import PaddleOCR, draw_ocr
+from paddleocr import PaddleOCR
 import matplotlib.pyplot as plt
 from PIL import Image
 import io

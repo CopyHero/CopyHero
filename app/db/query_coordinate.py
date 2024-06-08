@@ -1,7 +1,5 @@
 from .model import Coordinate
 import json
-from urllib.parse import urlparse
-from datetime import datetime, timedelta
 from mongoengine import Q
 
 

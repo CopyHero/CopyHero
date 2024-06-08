@@ -16,6 +16,7 @@ class Settings(BaseSettings):
     database_port = 27017
     database_username = ""
     database_password = ""
+    copy_hero_version = "1.0.6013"
 
     # Log configuration
     log_name = "copy-hero-log"
