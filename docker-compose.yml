@@ -1,0 +1,25 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8899:8899"
+    depends_on:
+      - mongo
+    networks:
+      - copy-hero-network
+
+  mongo:
+    image: mongo
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      copy-hero-network:
+        aliases:
+          - copy-hero-mongo
+
+networks:
+  copy-hero-network:
+    driver: bridge
+
+volumes:
+  mongo_data:
