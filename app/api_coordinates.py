@@ -1,4 +1,4 @@
-import os
+from typing import List
 from pydantic import BaseModel
 from fastapi import Depends
 from .app import get_user_info, app
@@ -8,7 +8,7 @@ from .lib.paddle_ocr import paddle_ocr_from_base64  # OCR function
 
 
 # Function to format OCR results into a structured format
-def format_coordinates(lines: list[any]):
+def format_coordinates(lines: List[any]):
     data = []
     for line in lines:
         line_points = []
