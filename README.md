@@ -1,6 +1,6 @@
 CopyHero
 ========
-<a href="https://copyhero.net"><img height="80px" width="80px" src="images/favicon.png"
+<a href="https://copyhero.net"><img height="80px" width="80px" src="images/favicon.webp"
 align="left" hspace="10" vspace="6"></a>
 
 **CopyHero Open Source Version** based on [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR), can easily copy text from images. It is easy to integrate into the website or software through Javascript SDK.It's completely **free**.
