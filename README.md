@@ -3,7 +3,7 @@ CopyHero
 <a href="https://copyhero.net"><img height="80px" width="80px" src="images/favicon.webp"
 align="left" hspace="10" vspace="6"></a>
 
-**CopyHero Open Source Version** based on [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR), can easily copy text from images. It is easy to integrate into the website or software through Javascript SDK.It's completely **free**.
+**CopyHero Open Source Version** can easily copy text from images. It is easy to integrate into the website or software through Javascript SDK.CopyHero's OCR is based on [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR).It's completely **free**.
 
 How CopyHero works for you
 --------------------------
@@ -29,7 +29,7 @@ If your website or software users are the following, it is recommended to integr
 Requirements
 ------------
   * Python version 3.9 (or greater)
-  * Mongo version 7.0.9 (or greater)
+  * Mongo version 7.0.9 (or greater) [How to install MongoDB](https://www.mongodb.com/docs/manual/installation/)
   * PaddleOCR 2.7.1 (or greater)
 
 Deployment
@@ -38,6 +38,7 @@ CopyHero now supports bleeding-edge installations. The easiest way to
 install the software and track updates is to clone the public repository.
 Create a folder on you web server (using whatever method makes sense for
 you) and cd into it. Then clone the repository (the folder must be empty!):
+### 1.1 Install CopyHero
 
     git clone https://github.com/CopyHero/CopyHero
 
@@ -46,8 +47,42 @@ instance
 
     cd CopyHero
     python3 -m venv ./venv
-    ./venv/.bin/pip install -r ./requirements.txt
+    ./venv/bin/pip install -r ./requirements.txt
 
+### 1.2 Install PaddlePaddle
+
+> If you do not have a Python environment, please refer to [Environment Preparation](./environment_en.md).
+
+- If you have CUDA 11 installed on your machine, please run the following command to install
+
+  ```bash
+  ./venv/bin/pip install paddlepaddle-gpu
+  ```
+
+- If you have no available GPU on your machine, please run the following command to install the CPU version
+
+  ```bash
+  ./venv/bin/pip install paddlepaddle
+  ```
+
+For more software version requirements, please refer to the instructions in [Installation Document](https://www.paddlepaddle.org.cn/en/install/quick) for operation.
+
+<a name="12-install-paddleocr-whl-package"></a>
+### 1.2 Install PaddleOCR Whl Package
+
+```bash
+./venv/bin/pip install "paddleocr>=2.0.1" # Recommend to use version 2.0.1+
+```
+### 1.3 Run CopyHero
+```bash
+./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8899
+```
+
+- **For windows users:** If you getting this error `OSError: [WinError 126] The specified module could not be found` when you install shapely on windows. Please try to download Shapely whl file [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely).
+
+  Reference: [Solve shapely installation on windows](https://stackoverflow.com/questions/44398265/install-shapely-oserror-winerror-126-the-specified-module-could-not-be-found)
+
+<a name="2-easy-to-use"></a>
 
 Help
 ----
