@@ -26,19 +26,36 @@ If your website or software users are the following, it is recommended to integr
 1. Website or software for practitioners in the legal and financial industries: extract text from scanned copies of contracts, agreements, financial statements, etc. to improve work efficiency and accuracy.
 
 
+## 1 Deploy via Docker
+
 Requirements
 ------------
-  * Python version 3.9 (or greater)
-  * Mongo version 7.0.9 (or greater) [How to install MongoDB](https://www.mongodb.com/docs/manual/installation/)
-  * PaddleOCR 2.7.1 (or greater)
+  * docker 20.0 (or greater)
+  * docker-compose 1.29.2 (or greater)
 
-Deployment
-----------
+### 1.1 Install CopyHero
+
+    git clone https://github.com/CopyHero/CopyHero
+    cd CopyHero
+    docker-compose up -d
+
+### 1.2 Check if it is correct
+
+    wget http://127.0.0.1:8899/info
+
+## 2 Deploy via code
 CopyHero now supports bleeding-edge installations. The easiest way to
 install the software and track updates is to clone the public repository.
 Create a folder on you web server (using whatever method makes sense for
 you) and cd into it. Then clone the repository (the folder must be empty!):
-### 1.1 Install CopyHero
+
+Requirements
+------------
+  * Python version 3.8 (or greater)
+  * Mongo version 7.0.9 (or greater) [How to install MongoDB](https://www.mongodb.com/docs/manual/installation/)
+  * PaddleOCR 2.7.1 (or greater)
+
+### 2.1 Install CopyHero
 
     git clone https://github.com/CopyHero/CopyHero
 
@@ -49,7 +66,7 @@ instance
     python3 -m venv ./venv
     ./venv/bin/pip install -r ./requirements.txt
 
-### 1.2 Install PaddlePaddle
+### 2.2 Install PaddlePaddle
 
 > If you do not have a Python environment, please refer to [Environment Preparation](./environment_en.md).
 
@@ -68,15 +85,19 @@ instance
 For more software version requirements, please refer to the instructions in [Installation Document](https://www.paddlepaddle.org.cn/en/install/quick) for operation.
 
 <a name="12-install-paddleocr-whl-package"></a>
-### 1.2 Install PaddleOCR Whl Package
+### 2.3 Install PaddleOCR Whl Package
 
 ```bash
 ./venv/bin/pip install "paddleocr>=2.0.1" # Recommend to use version 2.0.1+
 ```
-### 1.3 Run CopyHero
+### 2.4 Run CopyHero
 ```bash
 ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8899
 ```
+
+### 2.5 Check if it is correct
+
+    wget http://127.0.0.1:8899/info
 
 - **For windows users:** If you getting this error `OSError: [WinError 126] The specified module could not be found` when you install shapely on windows. Please try to download Shapely whl file [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely).
 
