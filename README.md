@@ -32,6 +32,7 @@ Requirements
 ------------
   * docker 20.0 (or greater)
   * docker-compose 1.29.2 (or greater)
+  * [How to install docker & docker-compose](https://docs.docker.com/engine/install/ubuntu/)
 
 ### 1.1 Install CopyHero
 
