@@ -66,7 +66,7 @@ instance
     python3 -m venv ./venv
     ./venv/bin/pip install -r ./requirements.txt
 
-### 2.2 Install PaddlePaddle
+### 2.2 Install PaddlePaddle (GPU)
 
 > If you do not have a Python environment, please refer to [Environment Preparation](./environment_en.md).
 
@@ -76,26 +76,12 @@ instance
   ./venv/bin/pip install paddlepaddle-gpu
   ```
 
-- If you have no available GPU on your machine, please run the following command to install the CPU version
-
-  ```bash
-  ./venv/bin/pip install paddlepaddle
-  ```
-
-For more software version requirements, please refer to the instructions in [Installation Document](https://www.paddlepaddle.org.cn/en/install/quick) for operation.
-
-<a name="12-install-paddleocr-whl-package"></a>
-### 2.3 Install PaddleOCR Whl Package
-
+### 2.3 Start CopyHero
 ```bash
-./venv/bin/pip install "paddleocr>=2.0.1" # Recommend to use version 2.0.1+
-```
-### 2.4 Run CopyHero
-```bash
-./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8899
+nohup ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8899 &
 ```
 
-### 2.5 Check if it is correct
+### 2.4 Check if it is correct
 
     wget http://127.0.0.1:8899/info
 
