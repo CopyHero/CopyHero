@@ -68,8 +68,6 @@ instance
 
 ### 2.2 Install PaddlePaddle (GPU)
 
-> If you do not have a Python environment, please refer to [Environment Preparation](./environment_en.md).
-
 - If you have CUDA 11 installed on your machine, please run the following command to install
 
   ```bash
