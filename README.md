@@ -85,11 +85,6 @@ nohup ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8899 &
 
     wget http://127.0.0.1:8899/info
 
-- **For windows users:** If you getting this error `OSError: [WinError 126] The specified module could not be found` when you install shapely on windows. Please try to download Shapely whl file [here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely).
-
-  Reference: [Solve shapely installation on windows](https://stackoverflow.com/questions/44398265/install-shapely-oserror-winerror-126-the-specified-module-could-not-be-found)
-
-<a name="2-easy-to-use"></a>
 
 Help
 ----
