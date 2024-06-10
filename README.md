@@ -97,8 +97,8 @@ To secure your service with HTTPS, you need an SSL/TLS certificate. You can obta
 ### 2.2 Install Nginx(Ubuntu)
 If not already installed, you need to install Nginx on your server. You can do this using your operating system's package manager. For example, on Ubuntu, you would use:
 ``` shell
-    sudo apt update
-    sudo apt install nginx
+sudo apt update
+sudo apt install nginx
 ```
 ### 2.3 Configure Nginx
 Create a new configuration file in the /etc/nginx/sites-available/ directory. You can name it after your domain, such as yourdomain.conf, and then link it to the sites-enabled directory.
