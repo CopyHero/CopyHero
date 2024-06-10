@@ -30,7 +30,7 @@ If your website or software users are the following, it is recommended to integr
 
 There are two modes for deploying CopyHero Server, namely docker deployment and source code deployment. Choose one according to the situation.
 
-### 1.1 Docker
+### 1.1 via Docker
 
 ### 1.1.1 Requirements
 ------------
@@ -48,7 +48,7 @@ There are two modes for deploying CopyHero Server, namely docker deployment and 
 
     wget http://127.0.0.1:8899/info
 
-## 1.2 Code
+## 1.2 via Code
 
 CopyHero now supports bleeding-edge installations. The easiest way to
 install the software and track updates is to clone the public repository.
